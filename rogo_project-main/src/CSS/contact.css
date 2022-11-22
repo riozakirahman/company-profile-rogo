@@ -1,0 +1,148 @@
+:root {
+  --colorbg: #004eff;
+  --colorcard: #163fb7;
+  --shadow: #00e1ff;
+  --bg-card-shadow: #00e1ff9a;
+  --bg-pink: #ff8fb1;
+  --bg-form: #eff5f5;
+}
+
+.contact-bg {
+  background-image: url(../assets//bg-service.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.contact-title {
+  color: white;
+}
+.contact-title h3 {
+  font-size: 3.5rem;
+}
+
+.contact-title p {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  margin: 60px 0;
+}
+.icon-items:hover {
+  transition: 0.6s ease-in-out;
+  background-color: var(--bg-pink);
+  border-radius: 10px;
+  color: var(--shadow);
+}
+
+.contact-icon {
+  font-size: 2.6rem;
+  color: white;
+}
+.icon-items {
+  padding: 5px;
+}
+.icon-items p {
+  margin: 20px 0;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-title {
+    padding: 1rem;
+  }
+  .contact-title h3 {
+    font-size: 2rem;
+  }
+  .contact-title p {
+    font-size: 1rem;
+  }
+  .icon-items p {
+    font-size: 0.8rem;
+  }
+  .contact-icon {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .icon-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-items p {
+    font-size: 0.8rem;
+  }
+  .contact-icon {
+    font-size: 1.9rem;
+  }
+}
+/* form */
+.bg-form {
+  width: 25%;
+  background: white;
+
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 20px;
+}
+.form-wrapper-items {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.form-items-left > label,
+.text-area-right > label {
+  color: black;
+  font-size: 1rem;
+}
+.form-items-left > input[type='text'] {
+  border-radius: 5px;
+  padding: 5px 2px;
+  background: var(--bg-formg);
+  border: 2px solid grey;
+  margin: 5px 0;
+}
+
+.text-area-right > textarea {
+  resize: none;
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid grey;
+}
+.btn-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.btn-form button {
+  font-size: 1rem;
+  padding: 8px 6px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff8fb1;
+  color: white;
+}
+
+@media screen and (max-width: 594px) {
+  .form-wrapper-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .btn-form button {
+    font-size: 0.9rem;
+  }
+}

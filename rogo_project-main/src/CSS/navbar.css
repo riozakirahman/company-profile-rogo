@@ -1,0 +1,168 @@
+a {
+  all: unset;
+}
+
+:root {
+  --masterColor: #193498;
+  --maincolor: #004eff;
+  --colorLighter: #ffffff;
+  --colorhover: #00e1ff;
+
+  /* set for desktop or tablet */
+  --marginDesk: 20% auto 20% auto;
+  --shadow: 0 0 12px 0px rgb(200, 200, 200);
+
+  /* font size */
+  --headerfont: 1rem;
+}
+
+.myheader {
+  display: flex;
+  /* position: fixed;
+  width: 100%;
+  top: 0; */
+  z-index: 1;
+  justify-content: space-between;
+  height: 130px;
+  padding: 1rem 7rem;
+  align-items: center;
+  background-color: var(--masterColor);
+}
+.logo {
+  padding: 0 20px;
+  max-width: 200px;
+  height: auto;
+}
+.logo img {
+  width: 100%;
+
+  cursor: pointer;
+}
+
+.content .h-btn {
+  padding: 0 1rem;
+}
+.content {
+  border-radius: 5px;
+  padding: 0 2rem;
+}
+.content > .nav-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: var(--colorhover);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav-btn {
+  display: none;
+  font-size: 1.6rem;
+  color: var(--colorhover);
+}
+.hide {
+  visibility: hidden;
+}
+
+.h-btn {
+  color: var(--colorLighter);
+  background-color: transparent;
+  border: none;
+  font-size: var(--headerfont);
+  font-weight: 600;
+}
+
+.h-btn:hover,
+.h-btn:focus {
+  transition: 0.6s ease-in;
+  color: var(--colorhover);
+}
+
+@media screen and (max-width: 1270px) {
+  .logo {
+    width: 25%;
+  }
+  .logo img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 975px) {
+  .logo {
+    width: 30%;
+  }
+  .logo img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .logo {
+    width: 40%;
+  }
+  .logo img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .logo {
+    width: 50%;
+  }
+  .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 733px) {
+  .nav-btn {
+    display: flex;
+  }
+  .content > .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+  .hide {
+    visibility: visible;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  .myheader {
+    position: sticky;
+    top: 0;
+    padding: 0 20px;
+  }
+
+  .myheader .content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--masterColor);
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  .myheader .responsive_nav {
+    transform: none;
+  }
+  .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: #ffffff;
+  }
+
+  .content > .h-btn {
+    font-weight: 500;
+    margin: 0 auto;
+  }
+}
