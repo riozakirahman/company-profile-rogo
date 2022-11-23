@@ -1,8 +1,8 @@
-import '../CSS/footer.css';
-import logo from '../assets/Company Logo.png';
-import { FiInstagram } from 'react-icons/fi';
-import { FiPhone } from 'react-icons/fi';
-import { AiOutlineMail } from 'react-icons/ai';
+import "../CSS/footer.css";
+import logo from "../assets/Company Logo.png";
+import { FiInstagram } from "react-icons/fi";
+import { FiPhone } from "react-icons/fi";
+import { AiOutlineMail } from "react-icons/ai";
 const date = new Date();
 const getYears = date.getFullYear();
 
@@ -13,15 +13,15 @@ function Footer() {
         <img className="logo" src={logo} />
         <div className="contact-wrapper">
           <div className="contact">
-            <FiPhone className="contact-icon" />
+            <FiPhone className="footer-icon" />
             <p className="contact-text">+6281908826101</p>
           </div>
           <div className="contact">
-            <AiOutlineMail className="contact-icon" />
+            <AiOutlineMail className="footer-icon" />
             <p className="contact-text">rogo@gmail.com</p>
           </div>
           <div className="contact">
-            <FiInstagram className="contact-icon" />
+            <FiInstagram className="footer-icon" />
             <p className="contact-text">@rogo</p>
           </div>
         </div>
