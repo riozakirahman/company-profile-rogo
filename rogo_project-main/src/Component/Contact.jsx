@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { HiLocationMarker } from 'react-icons/hi';
 import { IoIosCall } from 'react-icons/io';
 import { AiOutlineMail } from 'react-icons/ai';
 import '../CSS/contact.css';
+import emailjs from '@emailjs/browser';
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // API keys
+    emailjs.sendForm('service_o95u2fv', 'template_kkeky9j', form.current, 'SHHowy9_9CvMi7m2m').then(
+      (result) => {
+        console.log(result.text);
+        console.log('ini berhasil');
+      },
+      (error) => {
+        console.log(error.text);
+        console.log('Ini error cuk');
+      }
+    );
+  };
+
   return (
     <>
       <div className="contact-bg">
@@ -32,24 +50,49 @@ const Contact = () => {
         </div>
 
         {/* form */}
-        <div className="bg-form">
-          <div className="form-wrapper-items">
-            <div className="form-items-left">
-              <label htmlFor="name-user">Your Name</label>
-              <input type="text" className="name-user" />
-              <label htmlFor="mail-user">Mail</label>
-              <input type="text" className="mail-user" />
-              <label htmlFor="mail-user">Phone</label>
-              <input type="text" className="phone-user" />
+        <div className="contact-form">
+          <h4 className="contact-form__title">Contact Us</h4>
+          <form ref={form} onSubmit={sendEmail} className="contact-form__form">
+            <div className="form-row">
+              <div className="input-data">
+                <label htmlFor="name" className="input-text">
+                  Your Name
+                  <input type="text" id="name" className="input-field" name="user_name" required />
+                </label>
+              </div>
             </div>
-            <div className="text-area-right">
-              <label htmlFor="msg">Message</label>
-              <textarea name="txt-area" id="" cols="30" rows="10"></textarea>
+            <div className="form-row">
+              <div className="input-data">
+                <label htmlFor="mail" className="input-text">
+                  Mail
+                  <input type="email" id="mail" className="input-field" name="user_email" required />
+                </label>
+              </div>
             </div>
-          </div>
-          <div className="btn-form">
-            <button className="my-button">Check it out</button>
-          </div>
+            <div className="form-row">
+              <div className="input-data">
+                <label htmlFor="phone" className="input-text">
+                  Phone
+                  <input type="text" id="phone" className="input-field" name="user_phone" required />
+                </label>
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="input-data">
+                <label htmlFor="message" className="input-text">
+                  Message
+                  <textarea name="user_message" id="message" rows="10" cols="10" className="input-textarea" required></textarea>
+                </label>
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="input-data-submit">
+                <button type="submit" className="input-submit">
+                  Send
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </>
