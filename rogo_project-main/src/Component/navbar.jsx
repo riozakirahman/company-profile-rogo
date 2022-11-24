@@ -1,14 +1,14 @@
-import React from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-import { useRef } from "react";
-import "../CSS/navbar.css";
-import Logo from "../assets/Company Logo.png";
+import React from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
+import { useRef } from 'react';
+import '../CSS/navbar.css';
+import Logo from '../assets/Company Logo.png';
 
 const Navbar = () => {
   const navRef = useRef();
   const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+    navRef.current.classList.toggle('responsive_nav');
   };
 
   return (

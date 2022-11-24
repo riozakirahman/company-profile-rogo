@@ -140,6 +140,7 @@
   border-radius: 10px;
 }
 .input-submit:hover {
+  transition: 0.6s ease-in-out;
   background-color: var(--bg-pink);
   color: white;
 }
@@ -175,3 +176,8 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 /*  */
+
+/* turnoff resizeble */
+textarea {
+  resize: none;
+}
