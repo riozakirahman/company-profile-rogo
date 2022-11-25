@@ -23,7 +23,7 @@ const Service = () => {
           </div>
           {/* card */}
           <div className="container-img-service">
-            <img src={cardsatu} alt="portfoliocard" />
+            <img src={cardsatu} alt="portfoliocard " />
 
             <img src={carddua} alt="portfoliocard" />
 

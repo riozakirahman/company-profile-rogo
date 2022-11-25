@@ -28,7 +28,6 @@ const Navbar = () => {
           <NavLink to="/contact" onClick={showNavbar}>
             <button className="h-btn">Contact</button>
           </NavLink>
-
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
           </button>

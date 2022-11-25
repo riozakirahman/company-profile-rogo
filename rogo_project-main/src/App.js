@@ -1,16 +1,16 @@
-import React from "react";
-import Footer from "./Component/Footer";
+import React from 'react';
+import Footer from './Component/Footer';
 
 // add router to navbar
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Component/Navbar";
-import About from "./Component/About";
-import Contact from "./Component/Contact";
-import Service from "./Component/Service";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Component/Navbar';
+import About from './Component/About';
+import Contact from './Component/Contact';
+import Service from './Component/Service';
 function App() {
   return (
     <>
-      {" "}
+      {' '}
       <Router>
         <Navbar />
         <Routes>
