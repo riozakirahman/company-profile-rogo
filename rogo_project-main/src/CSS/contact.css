@@ -27,12 +27,18 @@
 }
 .contact-title h3 {
   font-size: 3.5rem;
+
+  animation: bounceInLeft;
+  animation-duration: 1.3s;
 }
 
 .contact-title p {
   font-size: 1.9rem;
   font-weight: 500;
   margin: 20px 0;
+
+  animation: bounceInRight;
+  animation-duration: 1.3s;
 }
 
 .icon-wrapper {
@@ -41,6 +47,9 @@
   gap: 40px;
   text-align: center;
   margin: 60px 0;
+
+  animation: fadeIn, bounceInRight;
+  animation-duration: 1.3s;
 }
 .icon-items:hover {
   transition: 0.6s ease-in-out;
@@ -98,6 +107,9 @@
   margin: 0 auto;
   padding: 1rem;
   border-radius: 20px;
+
+  animation: fadeInUp;
+  animation-duration: 2.2s;
 }
 .contact-form__title {
   text-align: center;

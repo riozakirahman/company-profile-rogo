@@ -42,12 +42,18 @@
 
 .items-service h1 {
   font-size: 3rem;
+
+  animation: bounceInLeft;
+  animation-duration: 1.3s;
 }
 
 .items-service p {
   font-size: 2rem;
   margin-top: 2rem;
   opacity: 0.8;
+
+  animation: bounceInRight;
+  animation-duration: 1.3s;
 }
 
 /* card-1*/
@@ -70,6 +76,19 @@
   transition: 0.6s ease-in-out;
   -webkit-box-shadow: 0 0 14px 2px var(--shadow);
   box-shadow: 0 0 14px 2px var(--shadow);
+}
+
+.container-img-service img:nth-child(1) {
+  animation: fadeInLeft;
+  animation-duration: 1.3s;
+}
+.container-img-service img:nth-child(2) {
+  animation: fadeIn;
+  animation-duration: 1.3s;
+}
+.container-img-service img:nth-child(3) {
+  animation: fadeInRight;
+  animation-duration: 1.3s;
 }
 
 @media screen and (max-width: 677px) {
@@ -102,6 +121,9 @@
   -ms-flex-pack: center;
   justify-content: center;
   gap: 80px;
+
+  animation: fadeInUp;
+  animation-duration: 2.3s;
 }
 .wrapper-card-dua {
   width: 350px;
@@ -195,10 +217,15 @@
   display: block;
   -o-object-fit: cover;
   object-fit: cover;
+
+  animation: bounceInLeft, fadeIn;
+  animation-duration: 2.3s;
 }
 .text-porto {
   width: 50%;
   padding: 2rem;
+  animation: bounceInRight, fadeIn;
+  animation-duration: 2.3s;
 }
 .text-porto h3 {
   font-size: 4rem;

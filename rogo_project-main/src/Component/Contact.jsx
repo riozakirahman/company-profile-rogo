@@ -4,6 +4,7 @@ import { IoIosCall } from 'react-icons/io';
 import { AiOutlineMail } from 'react-icons/ai';
 import '../CSS/contact.css';
 import emailjs from '@emailjs/browser';
+
 const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {

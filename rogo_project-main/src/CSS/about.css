@@ -50,11 +50,17 @@
 .client {
   padding: 100px 30px;
   background-color: var(--clientBg);
+
+  animation: bounceInUp;
+  animation-duration: 1.3s;
 }
 /*  */
 /* Porto */
 .porto {
   padding: 100px 30px;
+
+  animation: bounceInUp;
+  animation-duration: 1.3s;
 }
 .porto .section__images {
   width: 100%;
