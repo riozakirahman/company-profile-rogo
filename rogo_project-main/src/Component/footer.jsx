@@ -1,8 +1,8 @@
 import "../CSS/footer.css";
 import logo from "../assets/Company Logo.png";
 import { FiInstagram } from "react-icons/fi";
-import { FiPhone } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
+import { FaWhatsapp } from "react-icons/fa";
 const date = new Date();
 const getYears = date.getFullYear();
 
@@ -10,19 +10,34 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="content-footer">
-        <img className="logo" src={logo} />
-        <div className="contact-wrapper">
+        <img className="logo" alt="logo-img" src={logo} />
+        <div className="contacts">
           <div className="contact">
-            <FiPhone className="footer-icon" />
-            <p className="contact-text">+6281908826101</p>
+            <a
+              href="https://api.whatsapp.com/send?phone=6281908826101"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaWhatsapp className="footer-icon"></FaWhatsapp>
+            </a>
           </div>
           <div className="contact">
-            <AiOutlineMail className="footer-icon" />
-            <p className="contact-text">rogo@gmail.com</p>
+            <a
+              href="https://mailto:riozakirahman@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiOutlineMail className="footer-icon" />
+            </a>
           </div>
           <div className="contact">
-            <FiInstagram className="footer-icon" />
-            <p className="contact-text">@rogo</p>
+            <a
+              href="https://www.instagram.com/riozakirahman08/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FiInstagram className="footer-icon" />
+            </a>
           </div>
         </div>
         <ul className="nav">
