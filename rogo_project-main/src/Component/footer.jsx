@@ -42,17 +42,17 @@ function Footer() {
         </div>
         <ul className="nav">
           <li className="nav__list">
-            <a href="" className="nav__link">
+            <a href="/" className="nav__link">
               About Us
             </a>
           </li>
           <li className="nav__list">
-            <a href="" className="nav__link">
+            <a href="/service" className="nav__link">
               Service
             </a>
           </li>
           <li className="nav__list">
-            <a href="" className="nav__link">
+            <a href="/contact" className="nav__link">
               Contact
             </a>
           </li>
